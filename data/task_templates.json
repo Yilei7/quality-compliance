@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "library_version": "2026.08-mvp",
+  "jurisdiction": {
+    "country": "CN",
+    "province": "上海市"
+  },
+  "regulatory_content_status": "draft-requires-qualified-review",
+  "last_qualified_review_at": null,
+  "official_source_register": [],
+  "tasks": [
+    {
+      "id": "licence-renewal-readiness",
+      "title": "医疗器械经营许可证续期准备",
+      "module": "许可管理",
+      "applies_to": ["device_distribution"],
+      "regulatory_basis": "医疗器械经营许可及备案相关要求；以许可载明期限和属地要求为准。",
+      "source_ref": "references/regulatory_map.md#账号与记录管理",
+      "schedule": {"type": "profile_date_minus_days", "path": "licence.expiry_date", "days": 120},
+      "required_evidence": ["续期准备清单或办理回执"]
+    },
+    {
+      "id": "annual-self-inspection-report",
+      "title": "上海医疗器械追溯报告系统年度自查报告",
+      "module": "监管报送",
+      "applies_to": ["device_distribution"],
+      "regulatory_basis": "上海市医疗器械追溯报告系统年度自查报送要求；每年窗口和适用主体须在提交前核实。",
+      "source_ref": "references/regulatory_map.md#国家局省级监管系统账号清单",
+      "schedule": {"type": "annual", "month": 3, "day": 31},
+      "required_evidence": ["系统提交回执或截图"]
+    },
+    {
+      "id": "annual-internal-audit",
+      "title": "年度质量管理体系内审及 CAPA 闭环",
+      "module": "质量保证",
+      "applies_to": ["device_distribution"],
+      "regulatory_basis": "质量管理体系应定期自查并对发现问题采取纠正预防措施。",
+      "source_ref": "references/regulatory_map.md#内审与CAPA",
+      "schedule": {"type": "annual", "month": 12, "day": 31},
+      "required_evidence": ["内审计划、报告、CAPA 台账及有效性评价"]
+    },
+    {
+      "id": "annual-training",
+      "title": "年度质量管理培训与考核",
+      "module": "人员培训",
+      "applies_to": ["device_distribution"],
+      "regulatory_basis": "培训应覆盖岗位职责、质量管理制度和考核记录。",
+      "source_ref": "references/regulatory_map.md#培训",
+      "schedule": {"type": "annual", "month": 12, "day": 31},
+      "required_evidence": ["培训计划、签到、课件及考核记录"]
+    },
+    {
+      "id": "supplier-qualification-review",
+      "title": "供应商资质年度复核",
+      "module": "采购质量",
+      "applies_to": ["device_distribution"],
+      "regulatory_basis": "采购来源应合法并保持供应商资质文件有效。",
+      "source_ref": "references/inspection_checklist.md#3-物料管理",
+      "schedule": {"type": "annual", "month": 12, "day": 31},
+      "required_evidence": ["供应商名录、资质文件及复核记录"]
+    },
+    {
+      "id": "complaint-recall-drill",
+      "title": "投诉处理与召回演练复核",
+      "module": "售后质量",
+      "applies_to": ["device_distribution"],
+      "regulatory_basis": "投诉和召回应有记录、调查、处理和必要的纠正预防措施。",
+      "source_ref": "references/regulatory_map.md#召回与投诉",
+      "schedule": {"type": "annual", "month": 12, "day": 31},
+      "required_evidence": ["投诉台账、召回演练记录及 CAPA"]
+    },
+    {
+      "id": "cold-chain-validation",
+      "title": "冷链设施设备验证复核",
+      "module": "储运质量",
+      "applies_to": ["device_distribution"],
+      "requires": {"operating_conditions.cold_chain": true},
+      "regulatory_basis": "经营冷链产品时，储运设施设备及温湿度控制应经确认并持续监测。",
+      "source_ref": "references/regulatory_map.md#验证与校准",
+      "schedule": {"type": "annual", "month": 5, "day": 31},
+      "required_evidence": ["验证方案、报告及温湿度监测记录"]
+    },
+    {
+      "id": "temperature-monitoring-review",
+      "title": "温湿度监测记录月度复核",
+      "module": "储运质量",
+      "applies_to": ["device_distribution"],
+      "regulatory_basis": "库房环境记录应真实、完整、可追溯；频次以适用制度和产品储存条件为准。",
+      "source_ref": "references/inspection_checklist.md#2-厂房设施与设备",
+      "schedule": {"type": "monthly", "day": 5},
+      "required_evidence": ["上月温湿度记录及异常处置记录"]
+    }
+  ]
+}

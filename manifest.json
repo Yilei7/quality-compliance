@@ -1,0 +1,47 @@
+{
+  "manifest_version": 1,
+  "package": {
+    "name": "quality-compliance-core",
+    "display_name": "质量合规核心",
+    "version": "0.1.0-rc.1",
+    "release_channel": "controlled-pilot",
+    "public_release_ready": false
+  },
+  "compatibility": {
+    "api_version": 1,
+    "profile_schema_version": 2,
+    "task_state_schema_version": 1,
+    "python_requires": ">=3.10",
+    "entrypoint": "scripts/core.py",
+    "runtime_dependencies": []
+  },
+  "data": {
+    "runtime_location": "external",
+    "default_runtime_directory": "~/.quality-compliance",
+    "one_enterprise_per_runtime_directory": true
+  },
+  "scope": {
+    "jurisdiction": {
+      "country": "CN",
+      "province": "上海市"
+    },
+    "entity_types": [
+      "device_distribution"
+    ]
+  },
+  "regulatory_content": {
+    "status": "draft-requires-qualified-review",
+    "library_version": "2026.08-mvp",
+    "last_qualified_review_at": null,
+    "official_source_register": []
+  },
+  "distribution": {
+    "license": null,
+    "public_release_blockers": [
+      "qualified-regulatory-review-and-source-register",
+      "privacy-and-security-review",
+      "distribution-license-decision",
+      "support-and-incident-process"
+    ]
+  }
+}

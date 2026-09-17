@@ -1,0 +1,4 @@
+interface:
+  display_name: "质量合规巡检"
+  short_description: "上海器械经营企业的建档、诊断与合规巡检"
+  default_prompt: "Use $quality-compliance to create a baseline profile and readiness diagnosis for this Shanghai medical-device distributor."

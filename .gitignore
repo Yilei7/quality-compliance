@@ -1,0 +1,13 @@
+# Generated release output
+dist/
+
+# Runtime enterprise data
+company_profile.json
+tasks.json
+evidence/
+
+# Python and OS artifacts
+__pycache__/
+*.py[cod]
+.DS_Store
+
